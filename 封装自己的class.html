@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       div{
+           width: 100px;
+           height: 100px;
+           background-color: pink;
+           margin-bottom: 10px;
+       }
+    </style>
+   
+</head>
+<body>
+    <div></div>
+    <div class="demo"></div>
+    <div></div>
+    <div></div>
+    <div class="demo"></div>
+    <div class="test one"></div>
+    <div class="demo test"></div>
+    <div></div>
+    <div class="demo test one"></div>
+    <div></div>
+</body>
+<script>
+    window.onload = function () {
+ /*        function getClass(className) {
+            if (document.getElementsByClassName) {
+                return document.getElementsByClassName(className);
+            }
+            var arr = [];
+            var dom = document.getElementsByTagName('*');
+            for (var i = 0; i < dom.length; i++) {
+                var txt = dom[i].className.split('');
+                for (var j = 0; j < txt.length; j++) {
+                    if (txt[j] == className) {
+                        arr.push(dom[i])
+                    }
+                }
+            }
+            return (arr);
+        }
+        console.log(getClass('test').length); */
+        function getClass(className){
+            if(document.getElementsByClassName){
+                return document.getElementsByClassName(className)
+            }
+            var arr = [];
+            var dom = document.getElementsByTagName('*');//获取所有标签
+            for(var i = 0; i < dom.length; i++){
+                var str2 = dom[i].className.split('');
+                for(var j = 0; j < str2.length; j++){
+                    if(str2[i]==className){
+                        arr.push(dom[i]);
+                    }
+                }
+            }
+            return arr;
+        }
+       var aa= getClass('test','one');
+       for(var i = 0; i < aa.length; i++){
+           aa[i].style.backgroundColor='red';
+       }
+    }
+</script>
+</html>

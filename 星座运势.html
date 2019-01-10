@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       .box{
+           width: 350px;
+           height: 250px;
+           margin: 300px auto;
+           border: 1px solid #ccc;
+           
+       }
+       .tt{
+           padding:10px 0 0 20px;
+           font-weight: 700;
+           color: #036;
+       }
+       .tb{
+        padding: 0 20px;
+       }
+       .icon{
+           width: 50px;
+           height: 50px;
+           background: url('images/01big.jpg') no-repeat;
+           float: left;
+           margin-right: 10px;
+       }
+       .tb_t{
+           overflow: hidden;
+       }
+       .right{
+           /* margin-left: 20px; */
+       }
+       .yunshi{
+           width: 80px;
+           height: 13px;
+           background: url('images/02big.jpg')no-repeat;
+           display: inline-block;
+           position: relative;
+       }
+       .start{
+           width: 50px;
+           height: 13px;
+           position: absolute;
+             top: 0;
+             left: 0;
+             background: url(images/03big.jpg)no-repeat bottom;
+       }
+    </style>
+    <script>
+        window.onload = function(){
+           function $(id){ return document.getElementById(id) }
+           var arr = [10,9,6,7];
+           var txtArr = ['白羊座内容','摩羯座内容','双子座内容','双鱼座内容']
+           $('sel').onchange=function(){
+                $('content').innerHTML = txtArr[this.value];
+                $('icon').style.backgroundPosition='0'+(-this.value*50)+'px';
+                $('stAr').style.width = arr[this.value]*8+'px';
+           }
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="tt">星座运势</div>
+        <div class="tb">
+          <div class="tb_t">
+              <div class="icon" id="icon"></div>
+              <div class="right">
+                  <select name="" id="sel">
+                      <option value="0">白羊座 03.29-03.34</option>
+                      <option value="1">魔蝎座 03.29-03.34</option>
+                      <option value="2">双子座 03.29-03.34</option>
+                      <option value="3">双鱼座 03.29-03.34</option>
+                  </select>
+                  <div>
+                    今日运势:<span class="yunshi">
+                        <span class="start" id="stAr"></span>
+                    </span>
+                  </div>
+              </div>
+          </div>
+          <div class="tb_b" id="content">
+              你这几天的财运都很强， 但是危机总在不知不觉中发生了，例如： 因为太过乐观而误判情势，导致投...[详细]
+          </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+       <style>
+           .box{
+               margin: 100px auto;
+               width: 400px;
+               border: 1px solid #eee;
+           }
+         #bottom div{
+               width: 100%;
+               height: 170px;
+               background-color: PINK;
+               display: none;
+           }
+           .yellow{
+               background-color: yellow ;
+           }
+       </style>
+      <script>
+         window.onload = function(){
+             var btn = document.getElementsByTagName('button');
+             var div = document.getElementById('bottom').getElementsByTagName('div')
+            for(var i = 0 ;i < btn.length; i++){
+                btn[i].index = i;
+                // alert(btn.index)
+                btn[i].onclick = function(){
+                    for(var j = 0; j < btn.length; j++){
+                        btn[j].className = "";
+                    }
+                     this.className = 'yellow';
+                     for(var i = 0; i < div.length; i++){
+                         div[i].style.display = 'none';
+                     }
+                     div[this.index].style.display = 'block';
+                }
+               
+
+            }
+         }
+      </script>
+</head>
+<body>
+    <div class="box">
+        <div id="top">
+            <button class="yellow"> 按钮1</button>
+            <button> 按钮2</button>
+            <button> 按钮3</button>
+            <button> 按钮4</button>
+            <button> 按钮5</button>
+        </div>
+        <div id="bottom">
+            <div style="display:block">第一个div</div>
+            <div>第二个div</div>
+            <div>第三个div</div>
+            <div>第四个div</div>
+            <div>第五个div</div>
+        </div>
+    </div>
+</body>
+</html>

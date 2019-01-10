@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var txt = 'what are you 弄啥呢!';
+     function getLength(str){
+         var c=0;
+         var len = 0;
+         for(var i =0; i<str.length;i++){
+            c=str.charCodeAt(i);
+            if(c>=0&&c<=127){
+                len++;
+            }else{
+                len+=2;
+            }
+         }
+         return len;
+     }
+   var num =  getLength(txt);
+   console.log(num)
+    </script>
+</body>
+</html>

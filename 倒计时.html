@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload = function(){
+        var demo = document.getElementById('demo');
+        var endTime = new Date('2019/12/12 17:12:12');
+        setInterval(getTime,1000);
+        function getTime(){
+            var nowTime = new Date();
+            var send = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+            var d =  parseInt(send / 3600 / 24);
+            var h = parseInt(send/3600%24);
+            var m = parseInt(send / 60 % 60);
+            var s = send %60;
+            h < 10 ? h='0'+ h : h;
+            m < 10 ? m = '0' + m : m;
+            s < 10 ? s= '0' + s : s;
+            demo.innerHTML="距离抢购活动还有"+d+"天"+h+"时"+m+"分"+s+"秒"
+        }
+    }
+    
+    </script>
+</head>
+<body>
+     <div id="demo"></div>
+</body>
+</html>

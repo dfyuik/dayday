@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span{
+            background-color: #eee;
+            margin: 10px;
+            display: inline-block;
+            width: 110px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        .colors{
+            background-color: pink;
+        }
+    </style>
+    <script>
+      window.onload = function(){
+          var spans = document.getElementsByTagName('span');
+          for(var i = 0; i < spans.length; i++){
+              spans[i].index = i;
+              spans[i].onclick = function(){
+                  alert(this.index)
+                  for(var i = 0; i < spans.length; i++){
+                      spans[i].className = ""
+                  }
+                  this.className = 'colors'
+              }
+          }
+      }
+    
+    </script>
+</head>
+<body>
+   <span>点击变色</span>
+   <span>点击变色</span>
+   <span>点击变色</span>
+   <span>点击变色</span>
+   <span>点击变色</span>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       div{
+           width: 100px;
+           height: 100px;
+           background-color: pink;
+           margin: 20px;
+           display: none;
+       }
+    
+    </style>
+    <script>
+        function fn(e){
+            var dian = document.getElementById(e);
+            dian.style.display='block';
+        }
+    </script>
+</head>
+<body>
+    <button onclick="fn('demo1')">第1个按妞</button>
+    <button onclick="fn('demo2')">第2个按妞</button>
+    <button onclick="fn('demo3')">第3个按妞</button>
+    <button onclick="fn('demo4')">第4个按妞</button>
+    <div id="demo1">1</div>
+    <div id="demo2">2</div>
+    <div id="demo3">3</div>
+    <div id="demo4">4</div>
+</body>
+</html>

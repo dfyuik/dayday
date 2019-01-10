@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+
+        }
+        li span{
+            margin: 5px;
+        }
+        .current{
+            background-color: #aaa !important;
+        }
+    </style>
+    <script>
+      window.onload = function(){
+          var lis = document.getElementsByTagName('li');
+          for(var i = 0; i < lis.length; i++){
+              if(i % 2 ==0){
+                 lis[i].style.backgroundColor= '#eee';
+              }
+              lis[i].onmouseover = function(){
+                 this.className = 'current'
+              }
+              lis[i].onmouseout = function(){
+                  this.className = ""
+              }
+          }
+      }
+    </script>
+</head>
+<body>
+    <ul>
+        <li>
+            <span>游戏</span>
+            <span>100%</span>
+            <span>shen</span>
+            <span>天</span>
+        </li>
+        <li>
+            <span>游戏</span>
+            <span>100%</span>
+            <span>shen</span>
+            <span>天</span>
+        </li>
+        <li>
+            <span>游戏</span>
+            <span>100%</span>
+            <span>shen</span>
+            <span>天</span>
+        </li>
+        <li>
+            <span>游戏</span>
+            <span>100%</span>
+            <span>shen</span>
+            <span>天</span>
+        </li>
+        <li>
+            <span>游戏</span>
+            <span>100%</span>
+            <span>shen</span>
+            <span>天</span>
+        </li>
+        <li>
+            <span>游戏</span>
+            <span>100%</span>
+            <span>shen</span>
+            <span>天</span>
+        </li>
+        <li>
+            <span>游戏</span>
+            <span>100%</span>
+            <span>shen</span>
+            <span>天</span>
+        </li>
+        <li>
+            <span>游戏</span>
+            <span>100%</span>
+            <span>shen</span>
+            <span>天</span>
+        </li>
+        <li>
+            <span>游戏</span>
+            <span>100%</span>
+            <span>shen</span>
+            <span>天</span>
+        </li>
+        <li>
+            <span>游戏</span>
+            <span>100%</span>
+            <span>shen</span>
+            <span>天</span>
+        </li>
+        <li>
+            <span>游戏</span>
+            <span>100%</span>
+            <span>shen</span>
+            <span>天</span>
+        </li>
+    </ul>
+</body>
+</html>
